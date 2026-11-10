@@ -74,7 +74,7 @@ export default function ChildLedger({ wsId, childId, ws }: { wsId: string; child
       </div>
       <div className="card">
         <p style={{ marginTop: 0 }}>
-          Every paid video {data.child.name} was in: how much of it they were in, what the brand paid, what was set aside for them under the law, and the PayPal transaction that moved it into {data.child.trustLabel.toLowerCase()}.
+          Every paid video {data.child.name} was in: how much of it they were in, what the brand paid, what was set aside for them under the law, and the PayPal transaction that moved it into {data.child.trustLabel}.
         </p>
         <div className="row">
           {verify && <span className={`pill ${verify.ok ? "ok" : "bad"}`}>{verify.ok ? "✓ Record intact: every entry's hash chains to the one before" : `Record altered at entry ${verify.brokenAt}`}</span>}
