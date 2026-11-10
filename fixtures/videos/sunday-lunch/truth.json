@@ -1,0 +1,205 @@
+{
+  "id": "sunday-lunch",
+  "title": "Sunday Lunch (sponsored by Green Crate)",
+  "durationSec": 48.58,
+  "labelling": "Visual presence labelled per edit segment after 1 fps frame-by-frame review of each source clip; narration intervals are the exact spans of each generated narration line.",
+  "children": {
+    "mia": {
+      "visual": [
+        {
+          "start": 5,
+          "end": 21.62
+        },
+        {
+          "start": 28.62,
+          "end": 43.58
+        }
+      ],
+      "narration": [
+        {
+          "start": 5.5,
+          "end": 8.224
+        }
+      ],
+      "presence": [
+        {
+          "start": 5,
+          "end": 21.62
+        },
+        {
+          "start": 28.62,
+          "end": 43.58
+        }
+      ],
+      "presencePct": 65.01
+    },
+    "leo": {
+      "visual": [
+        {
+          "start": 5,
+          "end": 21.62
+        },
+        {
+          "start": 28.62,
+          "end": 43.58
+        }
+      ],
+      "narration": [
+        {
+          "start": 5.5,
+          "end": 8.224
+        }
+      ],
+      "presence": [
+        {
+          "start": 5,
+          "end": 21.62
+        },
+        {
+          "start": 28.62,
+          "end": 43.58
+        }
+      ],
+      "presencePct": 65.01
+    },
+    "noah": {
+      "visual": [
+        {
+          "start": 5,
+          "end": 21.62
+        },
+        {
+          "start": 28.62,
+          "end": 43.58
+        }
+      ],
+      "narration": [
+        {
+          "start": 22.12,
+          "end": 28.065
+        },
+        {
+          "start": 34.62,
+          "end": 38.784
+        }
+      ],
+      "presence": [
+        {
+          "start": 5,
+          "end": 21.62
+        },
+        {
+          "start": 22.12,
+          "end": 28.065
+        },
+        {
+          "start": 28.62,
+          "end": 43.58
+        }
+      ],
+      "presencePct": 77.24
+    }
+  },
+  "narration": [
+    {
+      "start": 0.5,
+      "end": 3.914,
+      "text": "It's Sunday, and that means homemade lunch.",
+      "subjects": []
+    },
+    {
+      "start": 5.5,
+      "end": 8.224,
+      "text": "Leo and Mia are on salad duty.",
+      "subjects": [
+        "leo",
+        "mia"
+      ]
+    },
+    {
+      "start": 22.12,
+      "end": 28.065,
+      "text": "Noah is making his very first sandwich today. He's been practising all week.",
+      "subjects": [
+        "noah"
+      ]
+    },
+    {
+      "start": 34.62,
+      "end": 38.784,
+      "text": "He did it! One slightly squashed sandwich.",
+      "subjects": [
+        "noah"
+      ]
+    },
+    {
+      "start": 44.08,
+      "end": 47.27,
+      "text": "Thanks to our sponsor, Green Crate.",
+      "subjects": []
+    }
+  ],
+  "timeline": [
+    {
+      "start": 0,
+      "end": 5,
+      "kind": "card",
+      "text": "Sunday Lunch",
+      "visible": []
+    },
+    {
+      "start": 5,
+      "end": 21.62,
+      "kind": "clip",
+      "clip": "5136233",
+      "in": 0,
+      "out": 16.62,
+      "visible": [
+        "mia",
+        "leo",
+        "noah"
+      ]
+    },
+    {
+      "start": 21.62,
+      "end": 28.62,
+      "kind": "card",
+      "text": "A First Sandwich",
+      "visible": []
+    },
+    {
+      "start": 28.62,
+      "end": 34.120000000000005,
+      "kind": "clip",
+      "clip": "5136237",
+      "in": 4,
+      "out": 9.5,
+      "visible": [
+        "mia",
+        "leo",
+        "noah"
+      ]
+    },
+    {
+      "start": 34.120000000000005,
+      "end": 43.580000000000005,
+      "kind": "clip",
+      "clip": "5136238",
+      "in": 0,
+      "out": 9.46,
+      "visible": [
+        "mia",
+        "leo",
+        "noah"
+      ],
+      "notes": "Mia is small and partly hidden in the background"
+    },
+    {
+      "start": 43.580000000000005,
+      "end": 48.580000000000005,
+      "kind": "card",
+      "text": "Thanks for Watching",
+      "visible": []
+    }
+  ]
+}

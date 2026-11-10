@@ -8,3 +8,5 @@ data/
 kaggle.json
 .DS_Store
 coverage/
+.build/
+.tts-job.json

@@ -1,0 +1,136 @@
+{
+  "id": "blender-review",
+  "title": "Brightblend Blender Review (sponsored)",
+  "durationSec": 33,
+  "labelling": "Visual presence labelled per edit segment after 1 fps frame-by-frame review of each source clip; narration intervals are the exact spans of each generated narration line.",
+  "children": {
+    "mia": {
+      "visual": [
+        {
+          "start": 16,
+          "end": 19
+        }
+      ],
+      "narration": [],
+      "presence": [
+        {
+          "start": 16,
+          "end": 19
+        }
+      ],
+      "presencePct": 9.09
+    },
+    "leo": {
+      "visual": [
+        {
+          "start": 16,
+          "end": 19
+        }
+      ],
+      "narration": [
+        {
+          "start": 19.5,
+          "end": 24.419
+        }
+      ],
+      "presence": [
+        {
+          "start": 16,
+          "end": 19
+        },
+        {
+          "start": 19.5,
+          "end": 24.419
+        }
+      ],
+      "presencePct": 24
+    },
+    "noah": {
+      "visual": [
+        {
+          "start": 16,
+          "end": 19
+        }
+      ],
+      "narration": [],
+      "presence": [
+        {
+          "start": 16,
+          "end": 19
+        }
+      ],
+      "presencePct": 9.09
+    }
+  },
+  "narration": [
+    {
+      "start": 0.5,
+      "end": 5.989,
+      "text": "Today I'm reviewing the new Brightblend blender, and honestly, I'm impressed.",
+      "subjects": []
+    },
+    {
+      "start": 8.5,
+      "end": 13.689,
+      "text": "It has six speeds, a glass jug, and it is surprisingly quiet.",
+      "subjects": []
+    },
+    {
+      "start": 19.5,
+      "end": 24.419,
+      "text": "The smoothie test was a big hit. Leo asked for seconds.",
+      "subjects": [
+        "leo"
+      ]
+    },
+    {
+      "start": 27.5,
+      "end": 32.489,
+      "text": "Use my code for ten percent off. The link is in the description.",
+      "subjects": []
+    }
+  ],
+  "timeline": [
+    {
+      "start": 0,
+      "end": 8,
+      "kind": "card",
+      "text": "Kitchen Gadget Review",
+      "visible": []
+    },
+    {
+      "start": 8,
+      "end": 16,
+      "kind": "card",
+      "text": "Unboxing",
+      "visible": []
+    },
+    {
+      "start": 16,
+      "end": 19,
+      "kind": "clip",
+      "clip": "5133207",
+      "in": 0,
+      "out": 3,
+      "visible": [
+        "mia",
+        "leo",
+        "noah"
+      ]
+    },
+    {
+      "start": 19,
+      "end": 27,
+      "kind": "card",
+      "text": "The Verdict",
+      "visible": []
+    },
+    {
+      "start": 27,
+      "end": 33,
+      "kind": "card",
+      "text": "Link Below",
+      "visible": []
+    }
+  ]
+}

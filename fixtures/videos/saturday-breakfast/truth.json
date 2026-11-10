@@ -1,0 +1,340 @@
+{
+  "id": "saturday-breakfast",
+  "title": "Saturday Breakfast (sponsored by Sunny Oats)",
+  "durationSec": 92.44,
+  "labelling": "Visual presence labelled per edit segment after 1 fps frame-by-frame review of each source clip; narration intervals are the exact spans of each generated narration line.",
+  "children": {
+    "mia": {
+      "visual": [
+        {
+          "start": 5,
+          "end": 15.66
+        },
+        {
+          "start": 21.66,
+          "end": 30.56
+        },
+        {
+          "start": 43.26,
+          "end": 46.26
+        },
+        {
+          "start": 52.26,
+          "end": 73.32
+        },
+        {
+          "start": 80.32,
+          "end": 92.44
+        }
+      ],
+      "narration": [
+        {
+          "start": 16.16,
+          "end": 21.474
+        },
+        {
+          "start": 73.82,
+          "end": 78.109
+        },
+        {
+          "start": 78.409,
+          "end": 80.479
+        }
+      ],
+      "presence": [
+        {
+          "start": 5,
+          "end": 15.66
+        },
+        {
+          "start": 16.16,
+          "end": 21.474
+        },
+        {
+          "start": 21.66,
+          "end": 30.56
+        },
+        {
+          "start": 43.26,
+          "end": 46.26
+        },
+        {
+          "start": 52.26,
+          "end": 73.32
+        },
+        {
+          "start": 73.82,
+          "end": 78.109
+        },
+        {
+          "start": 78.409,
+          "end": 92.44
+        }
+      ],
+      "presencePct": 72.75
+    },
+    "leo": {
+      "visual": [
+        {
+          "start": 5,
+          "end": 15.66
+        },
+        {
+          "start": 21.66,
+          "end": 46.26
+        },
+        {
+          "start": 52.26,
+          "end": 73.32
+        },
+        {
+          "start": 80.32,
+          "end": 92.44
+        }
+      ],
+      "narration": [
+        {
+          "start": 7.329,
+          "end": 12.573
+        }
+      ],
+      "presence": [
+        {
+          "start": 5,
+          "end": 15.66
+        },
+        {
+          "start": 21.66,
+          "end": 46.26
+        },
+        {
+          "start": 52.26,
+          "end": 73.32
+        },
+        {
+          "start": 80.32,
+          "end": 92.44
+        }
+      ],
+      "presencePct": 74.04
+    },
+    "noah": {
+      "visual": [
+        {
+          "start": 30.56,
+          "end": 46.26
+        },
+        {
+          "start": 52.26,
+          "end": 73.32
+        }
+      ],
+      "narration": [
+        {
+          "start": 31.06,
+          "end": 37.23
+        }
+      ],
+      "presence": [
+        {
+          "start": 30.56,
+          "end": 46.26
+        },
+        {
+          "start": 52.26,
+          "end": 73.32
+        }
+      ],
+      "presencePct": 39.77
+    }
+  },
+  "narration": [
+    {
+      "start": 0.5,
+      "end": 7.029,
+      "text": "Hey everyone, welcome back to the kitchen! Today we're making a big Saturday breakfast.",
+      "subjects": []
+    },
+    {
+      "start": 7.329,
+      "end": 12.573,
+      "text": "Leo is in charge of grapes today, and he takes that job very seriously.",
+      "subjects": [
+        "leo"
+      ]
+    },
+    {
+      "start": 16.16,
+      "end": 21.474,
+      "text": "Mia picked every single berry in this bowl herself, and she wants you to know it.",
+      "subjects": [
+        "mia"
+      ]
+    },
+    {
+      "start": 22.16,
+      "end": 26.86,
+      "text": "Our kitchen rule: grown-ups slice, kids arrange.",
+      "subjects": []
+    },
+    {
+      "start": 31.06,
+      "end": 37.23,
+      "text": "And here's Noah, our tiniest taste tester. He mostly eats the blueberries.",
+      "subjects": [
+        "noah"
+      ]
+    },
+    {
+      "start": 46.76,
+      "end": 52.399,
+      "text": "While the pancakes cook, a quick thank you to today's sponsor, Sunny Oats.",
+      "subjects": []
+    },
+    {
+      "start": 52.76,
+      "end": 55.319,
+      "text": "Everyone gets a seat at the table.",
+      "subjects": []
+    },
+    {
+      "start": 73.82,
+      "end": 78.109,
+      "text": "Mia says she'll do the dishes. We'll see about that.",
+      "subjects": [
+        "mia"
+      ]
+    },
+    {
+      "start": 78.409,
+      "end": 80.479,
+      "text": "She always says that.",
+      "subjects": [
+        "mia"
+      ]
+    },
+    {
+      "start": 80.82,
+      "end": 85.504,
+      "text": "Thanks for hanging out with us. See you next Saturday!",
+      "subjects": []
+    }
+  ],
+  "timeline": [
+    {
+      "start": 0,
+      "end": 5,
+      "kind": "card",
+      "text": "Saturday Breakfast",
+      "visible": []
+    },
+    {
+      "start": 5,
+      "end": 15.66,
+      "kind": "clip",
+      "clip": "5133208",
+      "in": 0,
+      "out": 10.66,
+      "visible": [
+        "mia",
+        "leo"
+      ]
+    },
+    {
+      "start": 15.66,
+      "end": 21.66,
+      "kind": "card",
+      "text": "Step 1: Fruit",
+      "visible": []
+    },
+    {
+      "start": 21.66,
+      "end": 30.560000000000002,
+      "kind": "clip",
+      "clip": "5133203",
+      "in": 0,
+      "out": 8.9,
+      "visible": [
+        "mia",
+        "leo"
+      ]
+    },
+    {
+      "start": 30.560000000000002,
+      "end": 43.260000000000005,
+      "kind": "clip",
+      "clip": "5133209",
+      "in": 0,
+      "out": 12.7,
+      "visible": [
+        "leo",
+        "noah"
+      ]
+    },
+    {
+      "start": 43.260000000000005,
+      "end": 46.260000000000005,
+      "kind": "clip",
+      "clip": "5133207",
+      "in": 0,
+      "out": 3,
+      "visible": [
+        "mia",
+        "leo",
+        "noah"
+      ]
+    },
+    {
+      "start": 46.260000000000005,
+      "end": 52.260000000000005,
+      "kind": "card",
+      "text": "Step 2: The Table",
+      "visible": []
+    },
+    {
+      "start": 52.260000000000005,
+      "end": 62.06,
+      "kind": "clip",
+      "clip": "5135464",
+      "in": 0,
+      "out": 9.8,
+      "visible": [
+        "mia",
+        "leo",
+        "noah"
+      ]
+    },
+    {
+      "start": 62.06,
+      "end": 73.32000000000001,
+      "kind": "clip",
+      "clip": "5135467",
+      "in": 0,
+      "out": 11.26,
+      "visible": [
+        "mia",
+        "leo",
+        "noah"
+      ]
+    },
+    {
+      "start": 73.32000000000001,
+      "end": 80.32000000000001,
+      "kind": "card",
+      "text": "Step 3: Clean Up",
+      "visible": []
+    },
+    {
+      "start": 80.32000000000001,
+      "end": 92.44000000000001,
+      "kind": "clip",
+      "clip": "5133206",
+      "in": 0,
+      "out": 12.12,
+      "visible": [
+        "mia",
+        "leo"
+      ]
+    }
+  ]
+}
