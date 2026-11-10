@@ -34,11 +34,11 @@
         },
         {
           "start": 73.82,
-          "end": 78.109
+          "end": 76.239
         },
         {
-          "start": 78.409,
-          "end": 80.479
+          "start": 78.709,
+          "end": 80.779
         }
       ],
       "presence": [
@@ -64,14 +64,14 @@
         },
         {
           "start": 73.82,
-          "end": 78.109
+          "end": 76.239
         },
         {
-          "start": 78.409,
+          "start": 78.709,
           "end": 92.44
         }
       ],
-      "presencePct": 72.75
+      "presencePct": 70.41
     },
     "leo": {
       "visual": [
@@ -94,8 +94,8 @@
       ],
       "narration": [
         {
-          "start": 7.329,
-          "end": 12.573
+          "start": 7.629,
+          "end": 12.873
         }
       ],
       "presence": [
@@ -132,7 +132,11 @@
       "narration": [
         {
           "start": 31.06,
-          "end": 37.23
+          "end": 34.584
+        },
+        {
+          "start": 34.884,
+          "end": 37.529
         }
       ],
       "presence": [
@@ -151,13 +155,19 @@
   "narration": [
     {
       "start": 0.5,
-      "end": 7.029,
-      "text": "Hey everyone, welcome back to the kitchen! Today we're making a big Saturday breakfast.",
+      "end": 3.885,
+      "text": "Hey everyone, welcome back to the kitchen!",
       "subjects": []
     },
     {
-      "start": 7.329,
-      "end": 12.573,
+      "start": 4.185,
+      "end": 7.329,
+      "text": "Today we're making a big Saturday breakfast.",
+      "subjects": []
+    },
+    {
+      "start": 7.629,
+      "end": 12.873,
       "text": "Leo is in charge of grapes today, and he takes that job very seriously.",
       "subjects": [
         "leo"
@@ -179,8 +189,16 @@
     },
     {
       "start": 31.06,
-      "end": 37.23,
-      "text": "And here's Noah, our tiniest taste tester. He mostly eats the blueberries.",
+      "end": 34.584,
+      "text": "And here's Noah, our tiniest taste tester.",
+      "subjects": [
+        "noah"
+      ]
+    },
+    {
+      "start": 34.884,
+      "end": 37.529,
+      "text": "He mostly eats the blueberries.",
       "subjects": [
         "noah"
       ]
@@ -199,24 +217,36 @@
     },
     {
       "start": 73.82,
-      "end": 78.109,
-      "text": "Mia says she'll do the dishes. We'll see about that.",
+      "end": 76.239,
+      "text": "Mia says she'll do the dishes.",
       "subjects": [
         "mia"
       ]
     },
     {
-      "start": 78.409,
-      "end": 80.479,
+      "start": 76.539,
+      "end": 78.409,
+      "text": "We'll see about that.",
+      "subjects": []
+    },
+    {
+      "start": 78.709,
+      "end": 80.779,
       "text": "She always says that.",
       "subjects": [
         "mia"
       ]
     },
     {
-      "start": 80.82,
-      "end": 85.504,
-      "text": "Thanks for hanging out with us. See you next Saturday!",
+      "start": 81.079,
+      "end": 83.613,
+      "text": "Thanks for hanging out with us.",
+      "subjects": []
+    },
+    {
+      "start": 83.913,
+      "end": 86.063,
+      "text": "See you next Saturday!",
       "subjects": []
     }
   ],

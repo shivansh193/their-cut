@@ -29,8 +29,8 @@
       ],
       "narration": [
         {
-          "start": 19.5,
-          "end": 24.419
+          "start": 22.28,
+          "end": 24.72
         }
       ],
       "presence": [
@@ -39,11 +39,11 @@
           "end": 19
         },
         {
-          "start": 19.5,
-          "end": 24.419
+          "start": 22.28,
+          "end": 24.72
         }
       ],
-      "presencePct": 24
+      "presencePct": 16.48
     },
     "noah": {
       "visual": [
@@ -77,16 +77,28 @@
     },
     {
       "start": 19.5,
-      "end": 24.419,
-      "text": "The smoothie test was a big hit. Leo asked for seconds.",
+      "end": 21.98,
+      "text": "The smoothie test was a big hit.",
+      "subjects": []
+    },
+    {
+      "start": 22.28,
+      "end": 24.72,
+      "text": "Leo asked for seconds.",
       "subjects": [
         "leo"
       ]
     },
     {
       "start": 27.5,
-      "end": 32.489,
-      "text": "Use my code for ten percent off. The link is in the description.",
+      "end": 30.3,
+      "text": "Use my code for ten percent off.",
+      "subjects": []
+    },
+    {
+      "start": 30.6,
+      "end": 32.79,
+      "text": "The link is in the description.",
       "subjects": []
     }
   ],

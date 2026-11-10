@@ -1,56 +1,394 @@
 {
   "children": [
-    { "id": "mia", "name": "Mia", "birthDate": "2016-05-14", "description": "older girl, long curly hair (green top on Saturday, yellow dress on Sunday)" },
-    { "id": "leo", "name": "Leo", "birthDate": "2018-08-02", "description": "boy, short hair (navy t-shirt on Saturday, patterned shirt on Sunday)" },
-    { "id": "noah", "name": "Noah", "birthDate": "2024-02-20", "description": "toddler (navy top or white shirt), often held or in a high chair" }
+    {
+      "id": "mia",
+      "name": "Mia",
+      "birthDate": "2016-05-14",
+      "description": "older girl, long curly hair (green top on Saturday, yellow dress on Sunday)"
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "birthDate": "2018-08-02",
+      "description": "boy, short hair (navy t-shirt on Saturday, patterned shirt on Sunday)"
+    },
+    {
+      "id": "noah",
+      "name": "Noah",
+      "birthDate": "2024-02-20",
+      "description": "toddler (navy top or white shirt), often held or in a high chair"
+    }
   ],
   "references": [
-    { "childId": "mia", "clip": "5135467", "t": 2.0, "box": [0.255, 0.41, 0.125, 0.39] },
-    { "childId": "leo", "clip": "5135467", "t": 2.0, "box": [0.37, 0.4, 0.11, 0.4] },
-    { "childId": "noah", "clip": "5135467", "t": 2.0, "box": [0.775, 0.63, 0.12, 0.3] }
+    {
+      "childId": "mia",
+      "clip": "5135467",
+      "t": 2,
+      "box": [
+        0.255,
+        0.41,
+        0.125,
+        0.39
+      ]
+    },
+    {
+      "childId": "leo",
+      "clip": "5135467",
+      "t": 2,
+      "box": [
+        0.37,
+        0.4,
+        0.11,
+        0.4
+      ]
+    },
+    {
+      "childId": "noah",
+      "clip": "5135467",
+      "t": 2,
+      "box": [
+        0.775,
+        0.63,
+        0.12,
+        0.3
+      ]
+    }
   ],
   "videos": [
     {
       "id": "saturday-breakfast",
       "title": "Saturday Breakfast (sponsored by Sunny Oats)",
       "segments": [
-        { "card": "Saturday Breakfast", "dur": 5, "say": [{ "text": "Hey everyone, welcome back to the kitchen! Today we're making a big Saturday breakfast.", "subjects": [] }] },
-        { "clip": "5133208", "in": 0, "out": 10.66, "visible": ["mia", "leo"], "say": [{ "text": "Leo is in charge of grapes today, and he takes that job very seriously.", "subjects": ["leo"] }] },
-        { "card": "Step 1: Fruit", "dur": 6, "say": [{ "text": "Mia picked every single berry in this bowl herself, and she wants you to know it.", "subjects": ["mia"] }] },
-        { "clip": "5133203", "in": 0, "out": 8.9, "visible": ["mia", "leo"], "say": [{ "text": "Our kitchen rule: grown-ups slice, kids arrange.", "subjects": [] }] },
-        { "clip": "5133209", "in": 0, "out": 12.7, "visible": ["leo", "noah"], "say": [{ "text": "And here's Noah, our tiniest taste tester. He mostly eats the blueberries.", "subjects": ["noah"] }] },
-        { "clip": "5133207", "in": 0, "out": 3, "visible": ["mia", "leo", "noah"] },
-        { "card": "Step 2: The Table", "dur": 6, "say": [{ "text": "While the pancakes cook, a quick thank you to today's sponsor, Sunny Oats.", "subjects": [] }] },
-        { "clip": "5135464", "in": 0, "out": 9.8, "visible": ["mia", "leo", "noah"], "say": [{ "text": "Everyone gets a seat at the table.", "subjects": [] }] },
-        { "clip": "5135467", "in": 0, "out": 11.26, "visible": ["mia", "leo", "noah"] },
-        { "card": "Step 3: Clean Up", "dur": 7, "say": [
-          { "text": "Mia says she'll do the dishes. We'll see about that.", "subjects": ["mia"] },
-          { "text": "She always says that.", "subjects": ["mia"] }
-        ] },
-        { "clip": "5133206", "in": 0, "out": 12.12, "visible": ["mia", "leo"], "say": [{ "text": "Thanks for hanging out with us. See you next Saturday!", "subjects": [] }] }
+        {
+          "card": "Saturday Breakfast",
+          "dur": 5,
+          "say": [
+            {
+              "text": "Hey everyone, welcome back to the kitchen!",
+              "subjects": []
+            },
+            {
+              "text": "Today we're making a big Saturday breakfast.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "clip": "5133208",
+          "in": 0,
+          "out": 10.66,
+          "visible": [
+            "mia",
+            "leo"
+          ],
+          "say": [
+            {
+              "text": "Leo is in charge of grapes today, and he takes that job very seriously.",
+              "subjects": [
+                "leo"
+              ]
+            }
+          ]
+        },
+        {
+          "card": "Step 1: Fruit",
+          "dur": 6,
+          "say": [
+            {
+              "text": "Mia picked every single berry in this bowl herself, and she wants you to know it.",
+              "subjects": [
+                "mia"
+              ]
+            }
+          ]
+        },
+        {
+          "clip": "5133203",
+          "in": 0,
+          "out": 8.9,
+          "visible": [
+            "mia",
+            "leo"
+          ],
+          "say": [
+            {
+              "text": "Our kitchen rule: grown-ups slice, kids arrange.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "clip": "5133209",
+          "in": 0,
+          "out": 12.7,
+          "visible": [
+            "leo",
+            "noah"
+          ],
+          "say": [
+            {
+              "text": "And here's Noah, our tiniest taste tester.",
+              "subjects": [
+                "noah"
+              ]
+            },
+            {
+              "text": "He mostly eats the blueberries.",
+              "subjects": [
+                "noah"
+              ]
+            }
+          ]
+        },
+        {
+          "clip": "5133207",
+          "in": 0,
+          "out": 3,
+          "visible": [
+            "mia",
+            "leo",
+            "noah"
+          ]
+        },
+        {
+          "card": "Step 2: The Table",
+          "dur": 6,
+          "say": [
+            {
+              "text": "While the pancakes cook, a quick thank you to today's sponsor, Sunny Oats.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "clip": "5135464",
+          "in": 0,
+          "out": 9.8,
+          "visible": [
+            "mia",
+            "leo",
+            "noah"
+          ],
+          "say": [
+            {
+              "text": "Everyone gets a seat at the table.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "clip": "5135467",
+          "in": 0,
+          "out": 11.26,
+          "visible": [
+            "mia",
+            "leo",
+            "noah"
+          ]
+        },
+        {
+          "card": "Step 3: Clean Up",
+          "dur": 7,
+          "say": [
+            {
+              "text": "Mia says she'll do the dishes.",
+              "subjects": [
+                "mia"
+              ]
+            },
+            {
+              "text": "We'll see about that.",
+              "subjects": []
+            },
+            {
+              "text": "She always says that.",
+              "subjects": [
+                "mia"
+              ]
+            }
+          ]
+        },
+        {
+          "clip": "5133206",
+          "in": 0,
+          "out": 12.12,
+          "visible": [
+            "mia",
+            "leo"
+          ],
+          "say": [
+            {
+              "text": "Thanks for hanging out with us.",
+              "subjects": []
+            },
+            {
+              "text": "See you next Saturday!",
+              "subjects": []
+            }
+          ]
+        }
       ]
     },
     {
       "id": "sunday-lunch",
       "title": "Sunday Lunch (sponsored by Green Crate)",
       "segments": [
-        { "card": "Sunday Lunch", "dur": 5, "say": [{ "text": "It's Sunday, and that means homemade lunch.", "subjects": [] }] },
-        { "clip": "5136233", "in": 0, "out": 16.62, "visible": ["mia", "leo", "noah"], "say": [{ "text": "Leo and Mia are on salad duty.", "subjects": ["leo", "mia"] }] },
-        { "card": "A First Sandwich", "dur": 7, "say": [{ "text": "Noah is making his very first sandwich today. He's been practising all week.", "subjects": ["noah"] }] },
-        { "clip": "5136237", "in": 4, "out": 9.5, "visible": ["mia", "leo", "noah"] },
-        { "clip": "5136238", "in": 0, "out": 9.46, "visible": ["mia", "leo", "noah"], "notes": "Mia is small and partly hidden in the background", "say": [{ "text": "He did it! One slightly squashed sandwich.", "subjects": ["noah"] }] },
-        { "card": "Thanks for Watching", "dur": 5, "say": [{ "text": "Thanks to our sponsor, Green Crate.", "subjects": [] }] }
+        {
+          "card": "Sunday Lunch",
+          "dur": 5,
+          "say": [
+            {
+              "text": "It's Sunday, and that means homemade lunch.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "clip": "5136233",
+          "in": 0,
+          "out": 16.62,
+          "visible": [
+            "mia",
+            "leo",
+            "noah"
+          ],
+          "say": [
+            {
+              "text": "Leo and Mia are on salad duty.",
+              "subjects": [
+                "leo",
+                "mia"
+              ]
+            }
+          ]
+        },
+        {
+          "card": "A First Sandwich",
+          "dur": 7,
+          "say": [
+            {
+              "text": "Noah is making his very first sandwich today.",
+              "subjects": [
+                "noah"
+              ]
+            },
+            {
+              "text": "He's been practising all week.",
+              "subjects": [
+                "noah"
+              ]
+            }
+          ]
+        },
+        {
+          "clip": "5136237",
+          "in": 4,
+          "out": 9.5,
+          "visible": [
+            "mia",
+            "leo",
+            "noah"
+          ]
+        },
+        {
+          "clip": "5136238",
+          "in": 0,
+          "out": 9.46,
+          "visible": [
+            "mia",
+            "leo",
+            "noah"
+          ],
+          "notes": "Mia is small and partly hidden in the background",
+          "say": [
+            {
+              "text": "He did it!",
+              "subjects": [
+                "noah"
+              ]
+            },
+            {
+              "text": "One slightly squashed sandwich.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "card": "Thanks for Watching",
+          "dur": 5,
+          "say": [
+            {
+              "text": "Thanks to our sponsor, Green Crate.",
+              "subjects": []
+            }
+          ]
+        }
       ]
     },
     {
       "id": "blender-review",
       "title": "Brightblend Blender Review (sponsored)",
       "segments": [
-        { "card": "Kitchen Gadget Review", "dur": 8, "say": [{ "text": "Today I'm reviewing the new Brightblend blender, and honestly, I'm impressed.", "subjects": [] }] },
-        { "card": "Unboxing", "dur": 8, "say": [{ "text": "It has six speeds, a glass jug, and it is surprisingly quiet.", "subjects": [] }] },
-        { "clip": "5133207", "in": 0, "out": 3, "visible": ["mia", "leo", "noah"] },
-        { "card": "The Verdict", "dur": 8, "say": [{ "text": "The smoothie test was a big hit. Leo asked for seconds.", "subjects": ["leo"] }] },
-        { "card": "Link Below", "dur": 6, "say": [{ "text": "Use my code for ten percent off. The link is in the description.", "subjects": [] }] }
+        {
+          "card": "Kitchen Gadget Review",
+          "dur": 8,
+          "say": [
+            {
+              "text": "Today I'm reviewing the new Brightblend blender, and honestly, I'm impressed.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "card": "Unboxing",
+          "dur": 8,
+          "say": [
+            {
+              "text": "It has six speeds, a glass jug, and it is surprisingly quiet.",
+              "subjects": []
+            }
+          ]
+        },
+        {
+          "clip": "5133207",
+          "in": 0,
+          "out": 3,
+          "visible": [
+            "mia",
+            "leo",
+            "noah"
+          ]
+        },
+        {
+          "card": "The Verdict",
+          "dur": 8,
+          "say": [
+            {
+              "text": "The smoothie test was a big hit.",
+              "subjects": []
+            },
+            {
+              "text": "Leo asked for seconds.",
+              "subjects": [
+                "leo"
+              ]
+            }
+          ]
+        },
+        {
+          "card": "Link Below",
+          "dur": 6,
+          "say": [
+            {
+              "text": "Use my code for ten percent off.",
+              "subjects": []
+            },
+            {
+              "text": "The link is in the description.",
+              "subjects": []
+            }
+          ]
+        }
       ]
     }
   ]

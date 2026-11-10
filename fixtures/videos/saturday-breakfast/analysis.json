@@ -1,0 +1,395 @@
+{
+  "durationSec": 92.44,
+  "model": "gemini-3.5-flash",
+  "analysedAt": "2026-11-10T12:48:21.447Z",
+  "ms": {
+    "visual": 34657,
+    "narration": 21772
+  },
+  "children": [
+    {
+      "childId": "mia",
+      "name": "Mia",
+      "visual": [
+        {
+          "start": 5,
+          "end": 15,
+          "confidence": 0.98,
+          "evidence": "Mia with long curly hair in green top standing on the right side of the counter."
+        },
+        {
+          "start": 21,
+          "end": 30,
+          "confidence": 0.98,
+          "evidence": "Mia in green top standing on right watching mom cut fruit."
+        },
+        {
+          "start": 43.5,
+          "end": 45.5,
+          "confidence": 0.85,
+          "evidence": "Mia visible behind Leo in the background."
+        },
+        {
+          "start": 52,
+          "end": 61,
+          "confidence": 0.98,
+          "evidence": "Mia in green top seated at the kitchen island eating berries."
+        },
+        {
+          "start": 61.5,
+          "end": 73,
+          "confidence": 0.98,
+          "evidence": "Mia in green top standing at the kitchen island counter."
+        },
+        {
+          "start": 80,
+          "end": 92,
+          "confidence": 0.98,
+          "evidence": "Mia in green top standing on the right looking at cutting board."
+        }
+      ],
+      "narration": [
+        {
+          "start": 15.5,
+          "end": 18.5,
+          "confidence": 1,
+          "evidence": "“Mia picked every single berry in this bowl herself,” (name)"
+        },
+        {
+          "start": 18.5,
+          "end": 21,
+          "confidence": 1,
+          "evidence": "“and she wants you to know it.” (pronoun)"
+        },
+        {
+          "start": 73.5,
+          "end": 75.5,
+          "confidence": 1,
+          "evidence": "“Mia says she'll do the dishes.” (name)"
+        },
+        {
+          "start": 77.5,
+          "end": 80,
+          "confidence": 1,
+          "evidence": "“She always says that.” (pronoun)"
+        }
+      ],
+      "presence": [
+        {
+          "start": 5,
+          "end": 15
+        },
+        {
+          "start": 15.5,
+          "end": 30
+        },
+        {
+          "start": 43.5,
+          "end": 45.5
+        },
+        {
+          "start": 52,
+          "end": 73
+        },
+        {
+          "start": 73.5,
+          "end": 75.5
+        },
+        {
+          "start": 77.5,
+          "end": 92
+        }
+      ],
+      "presencePct": 69.23409779316313,
+      "visualPct": 58.4162700129814,
+      "narrationOnlySec": 10
+    },
+    {
+      "childId": "leo",
+      "name": "Leo",
+      "visual": [
+        {
+          "start": 5,
+          "end": 15,
+          "confidence": 0.98,
+          "evidence": "Leo in navy t-shirt standing next to mom at the counter."
+        },
+        {
+          "start": 21,
+          "end": 30,
+          "confidence": 0.98,
+          "evidence": "Leo in navy t-shirt leaning on the counter."
+        },
+        {
+          "start": 30.5,
+          "end": 43,
+          "confidence": 0.98,
+          "evidence": "Leo leaning on the island counter."
+        },
+        {
+          "start": 43.5,
+          "end": 45.5,
+          "confidence": 0.98,
+          "evidence": "Leo standing next to dad holding Noah."
+        },
+        {
+          "start": 52,
+          "end": 61,
+          "confidence": 0.98,
+          "evidence": "Leo seated/leaning at the island counter eating."
+        },
+        {
+          "start": 61.5,
+          "end": 73,
+          "confidence": 0.98,
+          "evidence": "Leo standing in front of the island counter."
+        },
+        {
+          "start": 80,
+          "end": 92,
+          "confidence": 0.98,
+          "evidence": "Leo leaning on the counter while dad rests arm on his shoulder."
+        }
+      ],
+      "narration": [
+        {
+          "start": 6.5,
+          "end": 9.5,
+          "confidence": 1,
+          "evidence": "“Leo is in charge of grapes today,” (name)"
+        },
+        {
+          "start": 9.5,
+          "end": 14.5,
+          "confidence": 1,
+          "evidence": "“and he takes that job very seriously.” (pronoun)"
+        }
+      ],
+      "presence": [
+        {
+          "start": 5,
+          "end": 15
+        },
+        {
+          "start": 21,
+          "end": 45.5
+        },
+        {
+          "start": 52,
+          "end": 73
+        },
+        {
+          "start": 80,
+          "end": 92
+        }
+      ],
+      "presencePct": 73.02033751622675,
+      "visualPct": 73.02033751622675,
+      "narrationOnlySec": 0
+    },
+    {
+      "childId": "noah",
+      "name": "Noah",
+      "visual": [
+        {
+          "start": 30.5,
+          "end": 43,
+          "confidence": 0.98,
+          "evidence": "Noah being held by dad in the kitchen."
+        },
+        {
+          "start": 43.5,
+          "end": 45.5,
+          "confidence": 0.98,
+          "evidence": "Noah being held by dad."
+        },
+        {
+          "start": 52,
+          "end": 61,
+          "confidence": 0.98,
+          "evidence": "Noah sitting in a white high chair on the right."
+        },
+        {
+          "start": 61.5,
+          "end": 73,
+          "confidence": 0.98,
+          "evidence": "Noah sitting in high chair on the right side of the frame."
+        }
+      ],
+      "narration": [
+        {
+          "start": 30.5,
+          "end": 34,
+          "confidence": 1,
+          "evidence": "“And here's Noah, our tiniest taste tester.” (name)"
+        },
+        {
+          "start": 34,
+          "end": 37,
+          "confidence": 1,
+          "evidence": "“He mostly eats the blueberries.” (pronoun)"
+        }
+      ],
+      "presence": [
+        {
+          "start": 30.5,
+          "end": 45.5
+        },
+        {
+          "start": 52,
+          "end": 73
+        }
+      ],
+      "presencePct": 38.944180008654264,
+      "visualPct": 38.944180008654264,
+      "narrationOnlySec": 0
+    }
+  ],
+  "transcript": [
+    {
+      "start": 0,
+      "end": 3.5,
+      "text": "Hey everyone, welcome back to the kitchen.",
+      "subjects": []
+    },
+    {
+      "start": 3.5,
+      "end": 6.5,
+      "text": "Today we're making a big Saturday breakfast.",
+      "subjects": []
+    },
+    {
+      "start": 6.5,
+      "end": 9.5,
+      "text": "Leo is in charge of grapes today,",
+      "subjects": [
+        {
+          "childId": "leo",
+          "how": "name",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 9.5,
+      "end": 14.5,
+      "text": "and he takes that job very seriously.",
+      "subjects": [
+        {
+          "childId": "leo",
+          "how": "pronoun",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 15.5,
+      "end": 18.5,
+      "text": "Mia picked every single berry in this bowl herself,",
+      "subjects": [
+        {
+          "childId": "mia",
+          "how": "name",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 18.5,
+      "end": 21,
+      "text": "and she wants you to know it.",
+      "subjects": [
+        {
+          "childId": "mia",
+          "how": "pronoun",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 21.5,
+      "end": 30,
+      "text": "Our kitchen rule: grown-ups slice, kids arrange.",
+      "subjects": []
+    },
+    {
+      "start": 30.5,
+      "end": 34,
+      "text": "And here's Noah, our tiniest taste tester.",
+      "subjects": [
+        {
+          "childId": "noah",
+          "how": "name",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 34,
+      "end": 37,
+      "text": "He mostly eats the blueberries.",
+      "subjects": [
+        {
+          "childId": "noah",
+          "how": "pronoun",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 46,
+      "end": 51.5,
+      "text": "While the pancakes cook, a quick thank you to today's sponsor, Sunny Oats.",
+      "subjects": []
+    },
+    {
+      "start": 52,
+      "end": 57,
+      "text": "Everyone gets a seat at the table.",
+      "subjects": []
+    },
+    {
+      "start": 73.5,
+      "end": 75.5,
+      "text": "Mia says she'll do the dishes.",
+      "subjects": [
+        {
+          "childId": "mia",
+          "how": "name",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 75.5,
+      "end": 77.5,
+      "text": "We'll see about that.",
+      "subjects": []
+    },
+    {
+      "start": 77.5,
+      "end": 80,
+      "text": "She always says that.",
+      "subjects": [
+        {
+          "childId": "mia",
+          "how": "pronoun",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 80,
+      "end": 83.5,
+      "text": "Thanks for hanging out with us.",
+      "subjects": []
+    },
+    {
+      "start": 83.5,
+      "end": 86,
+      "text": "See you next Saturday.",
+      "subjects": []
+    }
+  ],
+  "privacy": "Matched only against the parent's own reference stills for this video. No external face database, no biometric templates stored; reference stills are discarded after analysis."
+}

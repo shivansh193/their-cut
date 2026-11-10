@@ -1,39 +1,55 @@
 1
-00:00:00,500 --> 00:00:07,029
-Hey everyone, welcome back to the kitchen! Today we're making a big Saturday breakfast.
+00:00:00,500 --> 00:00:03,885
+Hey everyone, welcome back to the kitchen!
 
 2
-00:00:07,329 --> 00:00:12,573
-Leo is in charge of grapes today, and he takes that job very seriously.
+00:00:04,185 --> 00:00:07,329
+Today we're making a big Saturday breakfast.
 
 3
+00:00:07,629 --> 00:00:12,873
+Leo is in charge of grapes today, and he takes that job very seriously.
+
+4
 00:00:16,160 --> 00:00:21,474
 Mia picked every single berry in this bowl herself, and she wants you to know it.
 
-4
+5
 00:00:22,160 --> 00:00:26,860
 Our kitchen rule: grown-ups slice, kids arrange.
 
-5
-00:00:31,060 --> 00:00:37,230
-And here's Noah, our tiniest taste tester. He mostly eats the blueberries.
-
 6
+00:00:31,060 --> 00:00:34,584
+And here's Noah, our tiniest taste tester.
+
+7
+00:00:34,884 --> 00:00:37,529
+He mostly eats the blueberries.
+
+8
 00:00:46,760 --> 00:00:52,399
 While the pancakes cook, a quick thank you to today's sponsor, Sunny Oats.
 
-7
+9
 00:00:52,760 --> 00:00:55,319
 Everyone gets a seat at the table.
 
-8
-00:01:13,820 --> 00:01:18,109
-Mia says she'll do the dishes. We'll see about that.
+10
+00:01:13,820 --> 00:01:16,239
+Mia says she'll do the dishes.
 
-9
-00:01:18,409 --> 00:01:20,479
+11
+00:01:16,539 --> 00:01:18,409
+We'll see about that.
+
+12
+00:01:18,709 --> 00:01:20,779
 She always says that.
 
-10
-00:01:20,820 --> 00:01:25,504
-Thanks for hanging out with us. See you next Saturday!
+13
+00:01:21,079 --> 00:01:23,613
+Thanks for hanging out with us.
+
+14
+00:01:23,913 --> 00:01:26,063
+See you next Saturday!

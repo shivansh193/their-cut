@@ -76,11 +76,15 @@
       "narration": [
         {
           "start": 22.12,
-          "end": 28.065
+          "end": 25.55
+        },
+        {
+          "start": 25.85,
+          "end": 28.364
         },
         {
           "start": 34.62,
-          "end": 38.784
+          "end": 36.064
         }
       ],
       "presence": [
@@ -90,7 +94,11 @@
         },
         {
           "start": 22.12,
-          "end": 28.065
+          "end": 25.55
+        },
+        {
+          "start": 25.85,
+          "end": 28.364
         },
         {
           "start": 28.62,
@@ -118,19 +126,33 @@
     },
     {
       "start": 22.12,
-      "end": 28.065,
-      "text": "Noah is making his very first sandwich today. He's been practising all week.",
+      "end": 25.55,
+      "text": "Noah is making his very first sandwich today.",
+      "subjects": [
+        "noah"
+      ]
+    },
+    {
+      "start": 25.85,
+      "end": 28.364,
+      "text": "He's been practising all week.",
       "subjects": [
         "noah"
       ]
     },
     {
       "start": 34.62,
-      "end": 38.784,
-      "text": "He did it! One slightly squashed sandwich.",
+      "end": 36.064,
+      "text": "He did it!",
       "subjects": [
         "noah"
       ]
+    },
+    {
+      "start": 36.364,
+      "end": 39.084,
+      "text": "One slightly squashed sandwich.",
+      "subjects": []
     },
     {
       "start": 44.08,
