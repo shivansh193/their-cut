@@ -97,7 +97,8 @@ export default function PresenceTimeline(props: {
         barMargin={4}
         resourceMargin={6}
         eventLayout="stack"
-        eventStyle="rounded"
+        eventStyle={"filled" as any}
+        eventRenderer={() => ""}
         createEventOnDblClick={false}
         zoomOnMouseWheel={false}
         zoomOnTimeAxisDoubleClick={false}

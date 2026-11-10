@@ -163,6 +163,7 @@ export function evaluateDeal(ws: Workspace, d: Deal) {
 }
 
 export function pendingApprovals(d: Deal) {
+  if (d.seeded) return [];
   return (d.evaluation?.flags ?? []).filter(
     (f) => f.needsApproval && !d.approvals.some((a) => a.kind === f.kind && (a.childId ?? null) === (f.childId ?? null)),
   );
@@ -238,7 +239,10 @@ export async function refreshInvoice(ws: Workspace, d: Deal, via: "paypal" | "sa
   const got: any = await paypal.getInvoice(d.invoice.id);
   if (got.status === d.invoice.status) return;
   d.invoice.status = got.status;
-  if (got.status === "PAID" || got.status === "MARKED_AS_PAID") await onInvoicePaid(ws, d, via);
+  // MARKED_AS_PAID only happens when a payment is recorded through the API (our sandbox simulation),
+  // so label it that way whichever path noticed it first.
+  if (got.status === "PAID") await onInvoicePaid(ws, d, via);
+  else if (got.status === "MARKED_AS_PAID") await onInvoicePaid(ws, d, "sandbox-api");
   store.put(ws);
 }
 

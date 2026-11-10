@@ -378,8 +378,10 @@ function MoneyPanel({ deal, ws, stepIdx, busy, act }: any) {
       <ol className="steps">
         {steps.map((s) => {
           const idx = STEP_ORDER.indexOf(s.k);
-          const done = stepIdx > idx || (s.k === "settled" && ["settled", "nothing-owed"].includes(deal.status)) || (s.k === "paying" && deal.status === "settled");
-          const now = !done && (stepIdx === idx || stepIdx + 1 === idx) && deal.status !== "error";
+          const finished = ["settled", "nothing-owed"].includes(deal.status);
+          // a status names the last step completed, except "paying", which is still in flight
+          const done = s.k === "paying" || s.k === "settled" ? finished : stepIdx >= idx;
+          const now = !done && deal.status !== "error" && s.k !== "settled" && (s.k === "paying" ? ["paid", "paying"].includes(deal.status) : STEP_ORDER.indexOf(deal.status) + 1 === idx || (s.k === "analysed" && ["draft", "analysing"].includes(deal.status)));
           return (
             <li key={s.k}>
               <span className={`dot ${done ? "done" : now ? "now" : ""} ${deal.status === "error" && now ? "err" : ""}`}>{done ? "✓" : ""}</span>

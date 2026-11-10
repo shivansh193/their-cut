@@ -153,7 +153,7 @@ function NewDeal({ ws, config, reload }: any) {
               setAmount(String(x.suggestedAmountCents / 100));
             }}
           >
-            <video src={`/media/videos/${x.id}.mp4#t=12`} muted preload="metadata" />
+            <video src={`/media/videos/${x.id}.mp4#t=${x.id === "blender-review" ? 17 : 12}`} muted preload="metadata" />
             <div style={{ marginTop: 6, fontWeight: 600 }}>{x.title.replace(/ \(.*\)$/, "")}</div>
             <div className="muted">{Math.round(x.durationSec)} s · demo footage (Pexels)</div>
           </button>

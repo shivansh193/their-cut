@@ -56,9 +56,11 @@ export async function explain(ev: Evaluation): Promise<{ text: string; source: "
     });
     const text = r.data.explanation.trim();
     // Guard: every dollar amount in the text must be one we computed.
-    const allowed = new Set([facts.gross, facts.total_owed, ...facts.children.map((c) => c.owed)]);
+    // Allowed = every dollar figure that appears anywhere in the facts we supplied (amounts, flags, thresholds).
+    const norm = (a: string) => (a.includes(".") ? a : `${a}.00`);
+    const allowed = new Set((JSON.stringify(facts).match(/\$[\d,]+(\.\d{2})?/g) ?? []).map(norm));
     const amounts = text.match(/\$[\d,]+(\.\d{2})?/g) ?? [];
-    const bad = amounts.filter((a) => !allowed.has(a.includes(".") ? a : `${a}.00`));
+    const bad = amounts.filter((a) => !allowed.has(norm(a)));
     if (bad.length) {
       console.warn(`[explain] AI text used amounts we didn't compute (${bad.join(", ")}); using template.`);
       return { text: templateExplanation(ev), source: "template" };

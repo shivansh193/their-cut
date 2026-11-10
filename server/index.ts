@@ -338,7 +338,7 @@ app.get("/healthz", (_req, res) => res.json({ ok: true }));
 
 if (existsSync(WEB)) {
   app.use(express.static(WEB, { maxAge: "1h", index: false }));
-  app.use((req, res, next) => (req.method === "GET" && !req.path.startsWith("/api/") ? res.sendFile(join(WEB, "index.html")) : next()));
+  app.use((req, res, next) => (req.method === "GET" && !req.path.startsWith("/api/") ? res.sendFile(join(WEB, "index.html"), { headers: { "Cache-Control": "no-cache" } }) : next()));
 }
 
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
