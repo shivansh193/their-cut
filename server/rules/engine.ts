@@ -166,7 +166,7 @@ function shareCents(grossCents: number, num: number, den: number, rate: number, 
   return Number((top + bottom - 1n) / bottom);
 }
 
-function amountsFor(
+export function amountsFor(
   rule: StateRule,
   deal: Deal,
   qualifying: string[],
