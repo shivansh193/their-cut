@@ -1,0 +1,53 @@
+# Render blueprint for Their Cut (free web service). Secrets are set in the Render dashboard / CLI, never here.
+services:
+  - type: web
+    name: their-cut
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: PAYPAL_ENV
+        value: sandbox
+      - key: AI_BACKEND
+        value: vertex
+      - key: GOOGLE_CLOUD_LOCATION
+        value: global
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        value: /etc/secrets/vertex-sa.json # Render secret file
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash
+      - key: AI_DAILY_BUDGET_USD
+        value: "0.30"
+      - key: AI_TOTAL_BUDGET_USD
+        value: "2.00"
+      - key: AI_MAX_CALLS_PER_HOUR
+        value: "20"
+      - key: AI_MAX_CALLS_PER_DAY
+        value: "60"
+      - key: AI_LIVE_RUNS_PER_IP_PER_DAY
+        value: "2"
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: PAYPAL_WEBHOOK_ID
+        sync: false
+      - key: PAYPAL_CREATOR_EMAIL
+        sync: false
+      - key: PAYPAL_BRAND_EMAIL
+        sync: false
+      - key: PAYPAL_TRUST_EMAIL_MIA
+        sync: false
+      - key: PAYPAL_TRUST_EMAIL_LEO
+        sync: false
+      - key: PAYPAL_TRUST_EMAIL_NOAH
+        sync: false
+      - key: GOOGLE_CLOUD_PROJECT
+        sync: false
+      - key: BRYNTUM_LICENSE_KEY
+        sync: false

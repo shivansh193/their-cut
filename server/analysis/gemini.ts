@@ -47,7 +47,27 @@ export function spendSummary() {
   return { todayUsd: s.days[today] ?? 0, totalUsd: s.totalUsd, dailyCapUsd: DAILY_CAP, totalCapUsd: TOTAL_CAP, calls: s.calls.length };
 }
 
+// Global call-rate limits, independent of the dollar caps. They hold even if the cost estimate is off.
+const MAX_PER_HOUR = Number(process.env.AI_MAX_CALLS_PER_HOUR ?? 20);
+const MAX_PER_DAY = Number(process.env.AI_MAX_CALLS_PER_DAY ?? 60);
+const callTimes: number[] = [];
+
+export function rateSummary() {
+  const now = Date.now();
+  return {
+    lastHour: callTimes.filter((t) => now - t < 3600_000).length,
+    lastDay: callTimes.filter((t) => now - t < 86_400_000).length,
+    maxPerHour: MAX_PER_HOUR,
+    maxPerDay: MAX_PER_DAY,
+  };
+}
+
 function checkBudget() {
+  const now = Date.now();
+  while (callTimes.length && now - callTimes[0] > 86_400_000) callTimes.shift();
+  const r = rateSummary();
+  if (r.lastHour >= MAX_PER_HOUR) throw new BudgetError(`AI is rate-limited (${MAX_PER_HOUR} calls/hour across all visitors). Cached results are still served.`);
+  if (r.lastDay >= MAX_PER_DAY) throw new BudgetError(`AI daily call limit reached (${MAX_PER_DAY}/day). Cached results are still served.`);
   const s = spendSummary();
   if (s.todayUsd >= DAILY_CAP) throw new BudgetError(`AI daily budget reached ($${s.todayUsd.toFixed(3)} of $${DAILY_CAP}). Cached results are still served.`);
   if (s.totalUsd >= TOTAL_CAP) throw new BudgetError(`AI total budget reached ($${s.totalUsd.toFixed(3)} of $${TOTAL_CAP}).`);
@@ -85,6 +105,11 @@ async function vertexAuth(): Promise<string> {
       credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON),
       scopes: ["https://www.googleapis.com/auth/cloud-platform"],
     });
+    token = (await (await auth.getClient()).getAccessToken()).token!;
+  } else if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+    // e.g. a Render secret file at /etc/secrets/vertex-sa.json
+    const { GoogleAuth } = await import("google-auth-library");
+    const auth = new GoogleAuth({ scopes: ["https://www.googleapis.com/auth/cloud-platform"] });
     token = (await (await auth.getClient()).getAccessToken()).token!;
   } else {
     // Local development: the developer's own gcloud login.
@@ -129,6 +154,7 @@ export async function generateJson<T>(args: {
   const model = args.model ?? process.env.GEMINI_MODEL ?? "gemini-3.5-flash";
   if (!/flash/i.test(model)) throw new BudgetError(`Model ${model} is not Flash-tier; only cheap models are allowed.`);
   checkBudget();
+  callTimes.push(Date.now()); // counts attempts, not just successes
   const body = JSON.stringify({
     system_instruction: args.system ? { parts: [{ text: args.system }] } : undefined,
     contents: [{ role: "user", parts: args.parts }],

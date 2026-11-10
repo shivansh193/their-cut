@@ -108,7 +108,22 @@ export async function analyse(ws: Workspace, d: Deal, opts: { live?: boolean } =
   d.status = "analysing";
   log(d, "analyse", opts.live ? "Running a fresh AI analysis (Gemini via Vertex AI)…" : "Loading the measured presence for this demo video.");
   store.put(ws);
-  if (opts.live) {
+  let live = !!opts.live;
+  if (live) {
+    try {
+      await liveAnalysis(ws, d);
+    } catch (e) {
+      // Over a rate or budget cap (or Vertex is down): fall back to the saved measurement.
+      log(d, "analyse", `Live AI run unavailable (${(e as Error).message}). Using the saved measurement instead.`, "warn");
+      live = false;
+    }
+  }
+  if (!live) loadCachedAnalysis(ws, d);
+  finishAnalysis(ws, d);
+}
+
+async function liveAnalysis(ws: Workspace, d: Deal) {
+  {
     const res = await analysePresence({
       video: readFileSync(videoPath(d.videoId)),
       durationSec: d.durationSec,
@@ -121,9 +136,10 @@ export async function analyse(ws: Workspace, d: Deal, opts: { live?: boolean } =
     });
     d.analysis = { ...res, source: "live" };
     d.presence = Object.fromEntries(res.children.map((c) => [c.childId, c.presence]));
-  } else {
-    loadCachedAnalysis(ws, d);
   }
+}
+
+function finishAnalysis(ws: Workspace, d: Deal) {
   d.adjustments = [];
   d.status = "analysed";
   const summary = Object.fromEntries(d.analysis!.children.map((c) => [c.childId, +c.presencePct.toFixed(2)]));

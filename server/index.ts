@@ -177,14 +177,23 @@ app.get("/api/ws/:ws/deals/:id/compare", wrap((req, res) => {
   res.json(out);
 }));
 
-const liveRuns = new Map<string, number>();
+// Per-visitor limits on anything that calls the AI (the global caps live in analysis/gemini.ts).
+const hits = new Map<string, number[]>();
+function limit(req: Request, bucket: string, max: number, windowMs: number, what: string) {
+  const ip = String(req.headers["x-forwarded-for"] ?? req.ip).split(",")[0].trim();
+  const key = `${bucket}:${ip}`;
+  const now = Date.now();
+  const xs = (hits.get(key) ?? []).filter((t) => now - t < windowMs);
+  if (xs.length >= max) throw Object.assign(new Error(`${what} is limited to ${max} per ${windowMs >= 86_400_000 ? "day" : "hour"} per visitor, to keep AI costs down. Cached results are still shown.`), { status: 429 });
+  xs.push(now);
+  hits.set(key, xs);
+}
+
 app.post("/api/ws/:ws/deals/:id/analyse", wrap(async (req, res) => {
   const w = ws(req);
   const d = deal(w, req);
   if (d.invoice?.paidAt) throw Object.assign(new Error("This deal is already paid; its measurement is locked."), { status: 409 });
-  const n = liveRuns.get(w.id) ?? 0;
-  if (n >= 3) throw Object.assign(new Error("Live AI runs are limited to 3 per demo workspace (cost cap). Cached results are shown."), { status: 429 });
-  liveRuns.set(w.id, n + 1);
+  limit(req, "live", Number(process.env.AI_LIVE_RUNS_PER_IP_PER_DAY ?? 2), 86_400_000, "Re-running the AI analysis");
   try {
     d.analysis = undefined;
     await runAgent(w, d, { live: true });
@@ -230,6 +239,7 @@ app.patch("/api/ws/:ws/deals/:id/presence", wrap(async (req, res) => {
 app.post("/api/ws/:ws/deals/:id/explain", wrap(async (req, res) => {
   const w = ws(req);
   const d = deal(w, req);
+  limit(req, "explain", 10, 3600_000, "Asking the AI for a new explanation");
   await reexplain(w, d);
   res.json(dealView(w, d));
 }));
