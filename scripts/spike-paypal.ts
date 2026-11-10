@@ -45,7 +45,12 @@ if (which === "payout" || which === "all") {
     const batch = await createPayout({
       senderBatchId: `${run}-payout`,
       emailSubject: "Their Cut spike payout",
-      items: [{ receiverEmail: need("PAYPAL_TRUST_EMAIL_MIA"), amountCents: 123, senderItemId: `${run}-mia`, note: "spike" }],
+      items: [
+        { receiverEmail: need("PAYPAL_TRUST_EMAIL_MIA"), amountCents: 123, senderItemId: `${run}-mia`, note: "spike: Mia trust" },
+        ...(process.env.PAYPAL_TRUST_EMAIL_LEO
+          ? [{ receiverEmail: process.env.PAYPAL_TRUST_EMAIL_LEO, amountCents: 45, senderItemId: `${run}-leo`, note: "spike: Leo trust" }]
+          : []),
+      ],
     });
     const id = batch.batch_header?.payout_batch_id;
     await new Promise((r) => setTimeout(r, 5000));
