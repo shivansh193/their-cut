@@ -1,0 +1,133 @@
+{
+  "durationSec": 33,
+  "model": "gemini-3.5-flash",
+  "analysedAt": "2026-11-10T13:00:19.797Z",
+  "ms": {
+    "visual": 9993,
+    "narration": 7384
+  },
+  "children": [
+    {
+      "childId": "mia",
+      "name": "Mia",
+      "visual": [
+        {
+          "start": 15,
+          "end": 18,
+          "confidence": 1,
+          "evidence": "girl with long curly hair in green top standing behind the boy"
+        }
+      ],
+      "narration": [],
+      "presence": [
+        {
+          "start": 15,
+          "end": 18
+        }
+      ],
+      "presencePct": 9.090909090909092,
+      "visualPct": 9.090909090909092,
+      "narrationOnlySec": 0
+    },
+    {
+      "childId": "leo",
+      "name": "Leo",
+      "visual": [
+        {
+          "start": 15,
+          "end": 18,
+          "confidence": 1,
+          "evidence": "boy in navy t-shirt standing at the kitchen counter"
+        }
+      ],
+      "narration": [
+        {
+          "start": 21.5,
+          "end": 23.5,
+          "confidence": 1,
+          "evidence": "“Leo asked for seconds.” (name)"
+        }
+      ],
+      "presence": [
+        {
+          "start": 15,
+          "end": 18
+        },
+        {
+          "start": 21.5,
+          "end": 23.5
+        }
+      ],
+      "presencePct": 15.151515151515152,
+      "visualPct": 9.090909090909092,
+      "narrationOnlySec": 2
+    },
+    {
+      "childId": "noah",
+      "name": "Noah",
+      "visual": [
+        {
+          "start": 15,
+          "end": 18,
+          "confidence": 1,
+          "evidence": "toddler in navy and white shirt being held by his father"
+        }
+      ],
+      "narration": [],
+      "presence": [
+        {
+          "start": 15,
+          "end": 18
+        }
+      ],
+      "presencePct": 9.090909090909092,
+      "visualPct": 9.090909090909092,
+      "narrationOnlySec": 0
+    }
+  ],
+  "transcript": [
+    {
+      "start": 0.5,
+      "end": 4.5,
+      "text": "Today I'm reviewing the new Bright Blend blender, and honestly, I'm impressed.",
+      "subjects": []
+    },
+    {
+      "start": 8,
+      "end": 12.5,
+      "text": "It has six speeds, a glass jug, and it is surprisingly quiet.",
+      "subjects": []
+    },
+    {
+      "start": 19,
+      "end": 21,
+      "text": "The smoothie test was a big hit.",
+      "subjects": []
+    },
+    {
+      "start": 21.5,
+      "end": 23.5,
+      "text": "Leo asked for seconds.",
+      "subjects": [
+        {
+          "childId": "leo",
+          "how": "name",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start": 26.5,
+      "end": 29,
+      "text": "Use my code for 10% off.",
+      "subjects": []
+    },
+    {
+      "start": 29.5,
+      "end": 31.5,
+      "text": "The link is in the description.",
+      "subjects": []
+    }
+  ],
+  "privacy": "Matched only against the parent's own reference stills for this video. No external face database, no biometric templates stored; reference stills are discarded after analysis."
+}

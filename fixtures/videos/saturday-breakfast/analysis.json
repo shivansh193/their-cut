@@ -1,10 +1,10 @@
 {
   "durationSec": 92.44,
   "model": "gemini-3.5-flash",
-  "analysedAt": "2026-11-10T12:48:21.447Z",
+  "analysedAt": "2026-11-10T13:01:42.053Z",
   "ms": {
-    "visual": 34657,
-    "narration": 21772
+    "visual": 66509,
+    "narration": 29519
   },
   "children": [
     {
@@ -12,310 +12,258 @@
       "name": "Mia",
       "visual": [
         {
-          "start": 5,
-          "end": 15,
-          "confidence": 0.98,
-          "evidence": "Mia with long curly hair in green top standing on the right side of the counter."
+          "start": 3.5,
+          "end": 14.5,
+          "confidence": 1,
+          "evidence": "girl in green top standing at the kitchen counter"
         },
         {
-          "start": 21,
-          "end": 30,
-          "confidence": 0.98,
-          "evidence": "Mia in green top standing on right watching mom cut fruit."
+          "start": 20.5,
+          "end": 29.5,
+          "confidence": 1,
+          "evidence": "girl in green top standing at the kitchen counter"
         },
         {
-          "start": 43.5,
+          "start": 42.5,
           "end": 45.5,
-          "confidence": 0.85,
-          "evidence": "Mia visible behind Leo in the background."
+          "confidence": 0.9,
+          "evidence": "girl in green top standing in the background"
         },
         {
-          "start": 52,
-          "end": 61,
-          "confidence": 0.98,
-          "evidence": "Mia in green top seated at the kitchen island eating berries."
+          "start": 51.5,
+          "end": 72.5,
+          "confidence": 1,
+          "evidence": "girl in green top sitting at the kitchen island"
         },
         {
-          "start": 61.5,
-          "end": 73,
-          "confidence": 0.98,
-          "evidence": "Mia in green top standing at the kitchen island counter."
-        },
-        {
-          "start": 80,
-          "end": 92,
-          "confidence": 0.98,
-          "evidence": "Mia in green top standing on the right looking at cutting board."
+          "start": 79.5,
+          "end": 92.4,
+          "confidence": 1,
+          "evidence": "girl in green top standing at the kitchen counter"
         }
       ],
       "narration": [
         {
           "start": 15.5,
-          "end": 18.5,
+          "end": 20.5,
           "confidence": 1,
-          "evidence": "“Mia picked every single berry in this bowl herself,” (name)"
+          "evidence": "“Mia picked every single berry in this bowl herself, and she wants you to know it” (name)"
         },
         {
-          "start": 18.5,
-          "end": 21,
+          "start": 73,
+          "end": 76.5,
           "confidence": 1,
-          "evidence": "“and she wants you to know it.” (pronoun)"
-        },
-        {
-          "start": 73.5,
-          "end": 75.5,
-          "confidence": 1,
-          "evidence": "“Mia says she'll do the dishes.” (name)"
+          "evidence": "“Mia says she'll do the dishes” (name)"
         },
         {
           "start": 77.5,
-          "end": 80,
+          "end": 79.5,
           "confidence": 1,
-          "evidence": "“She always says that.” (pronoun)"
+          "evidence": "“She always says that” (pronoun)"
         }
       ],
       "presence": [
         {
-          "start": 5,
-          "end": 15
+          "start": 3.5,
+          "end": 14.5
         },
         {
           "start": 15.5,
-          "end": 30
+          "end": 29.5
         },
         {
-          "start": 43.5,
+          "start": 42.5,
           "end": 45.5
         },
         {
-          "start": 52,
-          "end": 73
+          "start": 51.5,
+          "end": 72.5
         },
         {
-          "start": 73.5,
-          "end": 75.5
-        },
-        {
-          "start": 77.5,
-          "end": 92
+          "start": 73,
+          "end": 92.4
         }
       ],
-      "presencePct": 69.23409779316313,
-      "visualPct": 58.4162700129814,
-      "narrationOnlySec": 10
+      "presencePct": 73.9939420164431,
+      "visualPct": 61.5534400692341,
+      "narrationOnlySec": 11.5
     },
     {
       "childId": "leo",
       "name": "Leo",
       "visual": [
         {
-          "start": 5,
-          "end": 15,
-          "confidence": 0.98,
-          "evidence": "Leo in navy t-shirt standing next to mom at the counter."
+          "start": 3.5,
+          "end": 14.5,
+          "confidence": 1,
+          "evidence": "boy in navy t-shirt standing at the kitchen counter"
         },
         {
-          "start": 21,
-          "end": 30,
-          "confidence": 0.98,
-          "evidence": "Leo in navy t-shirt leaning on the counter."
+          "start": 20.5,
+          "end": 29.5,
+          "confidence": 1,
+          "evidence": "boy in navy t-shirt standing at the kitchen counter"
         },
         {
-          "start": 30.5,
-          "end": 43,
-          "confidence": 0.98,
-          "evidence": "Leo leaning on the island counter."
+          "start": 29.5,
+          "end": 42.5,
+          "confidence": 1,
+          "evidence": "boy in navy t-shirt standing at the kitchen counter"
         },
         {
-          "start": 43.5,
+          "start": 42.5,
           "end": 45.5,
-          "confidence": 0.98,
-          "evidence": "Leo standing next to dad holding Noah."
+          "confidence": 1,
+          "evidence": "boy in navy t-shirt standing next to his father"
         },
         {
-          "start": 52,
-          "end": 61,
-          "confidence": 0.98,
-          "evidence": "Leo seated/leaning at the island counter eating."
+          "start": 51.5,
+          "end": 72.5,
+          "confidence": 1,
+          "evidence": "boy in navy t-shirt sitting at the kitchen island"
         },
         {
-          "start": 61.5,
-          "end": 73,
-          "confidence": 0.98,
-          "evidence": "Leo standing in front of the island counter."
-        },
-        {
-          "start": 80,
-          "end": 92,
-          "confidence": 0.98,
-          "evidence": "Leo leaning on the counter while dad rests arm on his shoulder."
+          "start": 79.5,
+          "end": 92.4,
+          "confidence": 1,
+          "evidence": "boy in navy t-shirt standing at the kitchen counter"
         }
       ],
       "narration": [
         {
-          "start": 6.5,
-          "end": 9.5,
+          "start": 3,
+          "end": 11.5,
           "confidence": 1,
-          "evidence": "“Leo is in charge of grapes today,” (name)"
-        },
-        {
-          "start": 9.5,
-          "end": 14.5,
-          "confidence": 1,
-          "evidence": "“and he takes that job very seriously.” (pronoun)"
+          "evidence": "“Leo is in charge of grapes today, and he takes that job very seriously” (name)"
         }
       ],
       "presence": [
         {
-          "start": 5,
-          "end": 15
+          "start": 3,
+          "end": 14.5
         },
         {
-          "start": 21,
+          "start": 20.5,
           "end": 45.5
         },
         {
-          "start": 52,
-          "end": 73
+          "start": 51.5,
+          "end": 72.5
         },
         {
-          "start": 80,
-          "end": 92
+          "start": 79.5,
+          "end": 92.4
         }
       ],
-      "presencePct": 73.02033751622675,
-      "visualPct": 73.02033751622675,
-      "narrationOnlySec": 0
+      "presencePct": 76.15750757247946,
+      "visualPct": 75.61661618347037,
+      "narrationOnlySec": 0.5
     },
     {
       "childId": "noah",
       "name": "Noah",
       "visual": [
         {
-          "start": 30.5,
-          "end": 43,
-          "confidence": 0.98,
-          "evidence": "Noah being held by dad in the kitchen."
+          "start": 29.5,
+          "end": 42.5,
+          "confidence": 1,
+          "evidence": "toddler in navy/white top held by his father"
         },
         {
-          "start": 43.5,
+          "start": 42.5,
           "end": 45.5,
-          "confidence": 0.98,
-          "evidence": "Noah being held by dad."
+          "confidence": 1,
+          "evidence": "toddler in navy/white top held by his father"
         },
         {
-          "start": 52,
-          "end": 61,
-          "confidence": 0.98,
-          "evidence": "Noah sitting in a white high chair on the right."
-        },
-        {
-          "start": 61.5,
-          "end": 73,
-          "confidence": 0.98,
-          "evidence": "Noah sitting in high chair on the right side of the frame."
+          "start": 51.5,
+          "end": 72.5,
+          "confidence": 1,
+          "evidence": "toddler in navy/white top sitting in a high chair"
         }
       ],
       "narration": [
         {
-          "start": 30.5,
-          "end": 34,
+          "start": 30,
+          "end": 33.5,
           "confidence": 1,
-          "evidence": "“And here's Noah, our tiniest taste tester.” (name)"
+          "evidence": "“And here's Noah, our tiniest taste tester” (name)"
         },
         {
-          "start": 34,
-          "end": 37,
+          "start": 33.5,
+          "end": 36.5,
           "confidence": 1,
-          "evidence": "“He mostly eats the blueberries.” (pronoun)"
+          "evidence": "“He mostly eats the blueberries” (pronoun)"
         }
       ],
       "presence": [
         {
-          "start": 30.5,
+          "start": 29.5,
           "end": 45.5
         },
         {
-          "start": 52,
-          "end": 73
+          "start": 51.5,
+          "end": 72.5
         }
       ],
-      "presencePct": 38.944180008654264,
-      "visualPct": 38.944180008654264,
+      "presencePct": 40.02596278667244,
+      "visualPct": 40.02596278667244,
       "narrationOnlySec": 0
     }
   ],
   "transcript": [
     {
       "start": 0,
-      "end": 3.5,
-      "text": "Hey everyone, welcome back to the kitchen.",
+      "end": 1,
+      "text": "Hey everyone",
       "subjects": []
     },
     {
-      "start": 3.5,
-      "end": 6.5,
-      "text": "Today we're making a big Saturday breakfast.",
+      "start": 1,
+      "end": 2,
+      "text": "Welcome back to the kitchen",
       "subjects": []
     },
     {
-      "start": 6.5,
-      "end": 9.5,
-      "text": "Leo is in charge of grapes today,",
+      "start": 2,
+      "end": 3,
+      "text": "Today we're making a big Saturday breakfast",
+      "subjects": []
+    },
+    {
+      "start": 3,
+      "end": 11.5,
+      "text": "Leo is in charge of grapes today, and he takes that job very seriously",
       "subjects": [
         {
           "childId": "leo",
           "how": "name",
-          "confidence": 1
-        }
-      ]
-    },
-    {
-      "start": 9.5,
-      "end": 14.5,
-      "text": "and he takes that job very seriously.",
-      "subjects": [
-        {
-          "childId": "leo",
-          "how": "pronoun",
           "confidence": 1
         }
       ]
     },
     {
       "start": 15.5,
-      "end": 18.5,
-      "text": "Mia picked every single berry in this bowl herself,",
+      "end": 20.5,
+      "text": "Mia picked every single berry in this bowl herself, and she wants you to know it",
       "subjects": [
         {
           "childId": "mia",
           "how": "name",
-          "confidence": 1
-        }
-      ]
-    },
-    {
-      "start": 18.5,
-      "end": 21,
-      "text": "and she wants you to know it.",
-      "subjects": [
-        {
-          "childId": "mia",
-          "how": "pronoun",
           "confidence": 1
         }
       ]
     },
     {
       "start": 21.5,
-      "end": 30,
-      "text": "Our kitchen rule: grown-ups slice, kids arrange.",
+      "end": 25.5,
+      "text": "Our kitchen rule: grown-ups slice, kids arrange",
       "subjects": []
     },
     {
-      "start": 30.5,
-      "end": 34,
-      "text": "And here's Noah, our tiniest taste tester.",
+      "start": 30,
+      "end": 33.5,
+      "text": "And here's Noah, our tiniest taste tester",
       "subjects": [
         {
           "childId": "noah",
@@ -325,9 +273,9 @@
       ]
     },
     {
-      "start": 34,
-      "end": 37,
-      "text": "He mostly eats the blueberries.",
+      "start": 33.5,
+      "end": 36.5,
+      "text": "He mostly eats the blueberries",
       "subjects": [
         {
           "childId": "noah",
@@ -337,21 +285,21 @@
       ]
     },
     {
-      "start": 46,
+      "start": 45.5,
       "end": 51.5,
-      "text": "While the pancakes cook, a quick thank you to today's sponsor, Sunny Oats.",
+      "text": "While the pancakes cook, a quick thank you to today's sponsor, Sunny Oats",
       "subjects": []
     },
     {
-      "start": 52,
-      "end": 57,
-      "text": "Everyone gets a seat at the table.",
+      "start": 51.5,
+      "end": 54.5,
+      "text": "Everyone gets a seat at the table",
       "subjects": []
     },
     {
-      "start": 73.5,
-      "end": 75.5,
-      "text": "Mia says she'll do the dishes.",
+      "start": 73,
+      "end": 76.5,
+      "text": "Mia says she'll do the dishes",
       "subjects": [
         {
           "childId": "mia",
@@ -361,15 +309,15 @@
       ]
     },
     {
-      "start": 75.5,
+      "start": 76.5,
       "end": 77.5,
-      "text": "We'll see about that.",
+      "text": "We'll see about that",
       "subjects": []
     },
     {
       "start": 77.5,
-      "end": 80,
-      "text": "She always says that.",
+      "end": 79.5,
+      "text": "She always says that",
       "subjects": [
         {
           "childId": "mia",
@@ -379,15 +327,15 @@
       ]
     },
     {
-      "start": 80,
+      "start": 80.5,
       "end": 83.5,
-      "text": "Thanks for hanging out with us.",
+      "text": "Thanks for hanging out with us",
       "subjects": []
     },
     {
       "start": 83.5,
-      "end": 86,
-      "text": "See you next Saturday.",
+      "end": 85.5,
+      "text": "See you next Saturday",
       "subjects": []
     }
   ],

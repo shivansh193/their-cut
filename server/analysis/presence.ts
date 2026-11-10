@@ -134,6 +134,8 @@ export async function analysePresence(args: {
   minConfidence?: number;
 }): Promise<PresenceResult> {
   const minConf = args.minConfidence ?? 0.5;
+  const maxSec = Number(process.env.AI_MAX_VIDEO_SEC ?? 180);
+  if (args.durationSec > maxSec) throw new Error(`Videos longer than ${maxSec}s aren't analysed in the demo (cost cap).`);
   const vid = await videoPart(args.video, "video/mp4", 2);
 
   const refParts: Part[] = [];
@@ -166,6 +168,8 @@ Return every child_id, with an empty intervals array if they never appear.`,
 
   const narrationP = generateJson<{ lines: NarrationLine[] & { subjects: { child_id: string; how: string; confidence: number }[] }[] }>({
     label: "narration",
+    mediaResolution: "MEDIA_RESOLUTION_LOW", // only the audio matters here
+
     schema: NARRATION_SCHEMA,
     system:
       "You transcribe narration for a child-earnings compliance tool and decide which child, if any, each spoken line is about. A child is the subject when the line talks about them, by name, by pronoun (he, she, they) referring to them, or by an unambiguous description. Do not mark a child just because they are on screen. Generic group references ('the kids', 'everyone', 'the family') do not make any specific child the subject unless context makes clear which child is meant.",
