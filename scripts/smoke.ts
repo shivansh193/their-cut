@@ -18,7 +18,7 @@ console.log("workspace", ws.id, "ledger", ws.ledger);
 for (const d of ws.deals) console.log(" history:", d.date, d.videoId, d.status, JSON.stringify(d.setAsideCents));
 console.log(" tracker:", ws.tracker.map((t: any) => `${t.name} ${(t.windowPresence * 100).toFixed(1)}% set aside ${usd(t.setAsideCents)}`).join(" | "));
 
-let d = await api("POST", `/api/ws/${ws.id}/deals`, { videoId: "saturday-breakfast", brand: "Sunny Oats", amountCents: 250000 });
+let d = await api("POST", `/api/ws/${ws.id}/deals`, { videoId: process.env.SMOKE_VIDEO ?? "saturday-breakfast", brand: "Sunny Oats", amountCents: Number(process.env.SMOKE_CENTS ?? 250000) });
 for (let i = 0; i < 30 && !["invoiced", "error"].includes(d.status); i++) {
   await wait(1000);
   d = await api("GET", `/api/ws/${ws.id}/deals/${d.id}`);

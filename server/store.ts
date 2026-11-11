@@ -69,7 +69,7 @@ export interface Deal {
   explanation?: { text: string; source: "ai" | "template"; at: string };
   approvals: { kind: string; childId?: string; at: string; note?: string }[];
   invoice?: { id: string; status: string; payerUrl?: string; paidVia?: "paypal" | "sandbox-api"; paidAt?: string };
-  payout?: { senderBatchId: string; batchId?: string; status?: string; items: PayoutItem[] };
+  payout?: { senderBatchId: string; batchId?: string; status?: string; items: PayoutItem[]; attempt?: number };
   setAsideCents: Record<string, number>;
   log: { at: string; step: string; message: string; level?: "info" | "warn" | "error" }[];
   error?: string;

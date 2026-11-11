@@ -4,7 +4,7 @@ import { join, resolve } from "node:path";
 import { store, verifyLedger, type Workspace, type Deal } from "./store.js";
 import {
   createWorkspace, newDeal, runAgent, simulateBrandPayment, refreshInvoice, refreshPayout, approve,
-  adjustPresence, reexplain, pendingApprovals, tracker, startPoller, onInvoicePaid, evaluateDeal,
+  adjustPresence, reexplain, pendingApprovals, tracker, startPoller, onInvoicePaid, evaluateDeal, retry,
 } from "./agent.js";
 import { evaluate } from "./rules/engine.js";
 import { STATE_RULES, DISCLAIMER, type StateCode } from "./rules/states.js";
@@ -216,7 +216,8 @@ app.post("/api/ws/:ws/deals/:id/refresh", wrap(async (req, res) => {
   const d = deal(w, req);
   if (d.status === "invoiced") await refreshInvoice(w, d);
   if (d.status === "paying") await refreshPayout(w, d);
-  if (d.status === "error" || (d.status === "analysed" && !d.invoice)) await runAgent(w, d);
+  if (d.status === "error") await retry(w, d);
+  else if (d.status === "analysed" && !d.invoice) await runAgent(w, d);
   res.json(dealView(w, d));
 }));
 

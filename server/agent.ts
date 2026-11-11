@@ -283,6 +283,20 @@ export async function approve(ws: Workspace, d: Deal, items: { kind: string; chi
   await maybePay(ws, d);
 }
 
+/** Retry after an error: re-run payouts if the brand already paid, otherwise re-run the agent. */
+export async function retry(ws: Workspace, d: Deal) {
+  if (d.status !== "error") return;
+  d.error = undefined;
+  if (d.invoice?.paidAt) {
+    d.status = "paid";
+    log(d, "retry", "Retrying the trust payouts.");
+    await maybePay(ws, d);
+  } else {
+    await runAgent(ws, d);
+  }
+  store.put(ws);
+}
+
 async function maybePay(ws: Workspace, d: Deal) {
   if (d.status !== "paid") return;
   const p = pendingApprovals(d);
@@ -310,11 +324,16 @@ async function firePayouts(ws: Workspace, d: Deal) {
   const missing = items.filter((i) => !ws.children.find((c) => c.id === i.childId)?.trustEmail);
   if (missing.length) throw new Error(`No trust account set for: ${missing.map((m) => m.childId).join(", ")}`);
 
-  const senderBatchId = `tc-${d.id}`; // deterministic: a retry can never pay twice
-  d.payout = { senderBatchId, items };
+  // Deterministic per deal and attempt: a network retry replays the same request and can never pay twice.
+  // A new attempt number is only used after PayPal rejected the previous attempt outright (no batch created).
+  const attempt = (d.payout?.attempt ?? 0) + (d.payout && !d.payout.batchId ? 1 : 0);
+  const senderBatchId = attempt ? `tc-${d.id}-a${attempt}` : `tc-${d.id}`;
+  d.payout = { senderBatchId, items, attempt };
   d.status = "paying";
   store.put(ws);
-  const batch = await paypal.createPayout({
+  let batch: any;
+  try {
+    batch = await paypal.createPayout({
     senderBatchId,
     emailSubject: `Their Cut: trust deposit from ${d.brand}`,
     items: items.map((i) => {
@@ -326,7 +345,19 @@ async function firePayouts(ws: Workspace, d: Deal) {
         note: `${child.name}'s ${i.kind === "share" ? "legal share" : "catch-up share"} for "${d.videoTitle}" (${STATE_RULES[d.state].name} law).`,
       };
     }),
-  });
+    });
+  } catch (e) {
+    const name = (e as any)?.body?.name;
+    d.status = "error";
+    d.error =
+      name === "INSUFFICIENT_FUNDS"
+        ? "PayPal declined the payouts: the creator's sandbox account doesn't have enough balance (INSUFFICIENT_FUNDS). No money moved. Top up the sandbox account, then retry."
+        : `PayPal declined the payouts: ${(e as Error).message}. No money moved; you can retry.`;
+    log(d, "payout", d.error, "error");
+    appendLedger(ws, d.id, "payout.rejected", { senderBatchId, reason: name ?? (e as Error).message });
+    store.put(ws);
+    return;
+  }
   d.payout.batchId = batch.batch_header?.payout_batch_id;
   d.payout.status = batch.batch_header?.batch_status;
   store.indexPayout(d.payout.batchId!, ws.id);
